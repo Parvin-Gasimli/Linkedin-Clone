@@ -25,7 +25,7 @@ const LeftSide = (props) => {
           </a>
         </Widget>
         <Item>
-          <span>
+          <span style={{padding:'12px'}} >
             <img src="/images/item-icon.svg" />
             My items
           </span>
@@ -183,6 +183,7 @@ a{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding: 12px;
 
   }
   &:last-child{
