@@ -28,6 +28,42 @@ const Main = () => {
           </button>
         </div>
       </ShareBox>
+      <div>
+        <Article>
+          <SharedActor>
+            <a>
+              <img src="/images/user.svg" />
+              <div>
+                <span>Title</span>
+                <span>Info</span>
+                <span>Date</span>
+              </div>
+            </a>
+            <button>
+              <img style={{ width: "30px " }} src="/images/ellipsis.svg.png" />
+            </button>
+          </SharedActor>
+          <Description>
+              Descriptions
+
+
+          </Description>
+          <SharedImg>
+              <a>
+                  <img src="/images/mount.jfif"/>
+              </a>
+          </SharedImg>
+          <SocialCounts>
+              <li>
+                  <button>
+                      <img src="https://static-exp1.licdn.com/sc/h/5zhd32fqi5pxwzsz78iui643e"/>
+                  </button>
+
+              </li>
+          </SocialCounts>
+
+        </Article>
+      </div>
     </Container>
   );
 };
@@ -106,3 +142,78 @@ const ShareBox = styled(CommonCart)`
     }
   }
 `;
+const Article = styled(CommonCart)`
+  padding: 0;
+  margin: 0 0 8px;
+  overflow: visible;
+`;
+const SharedActor = styled.div`
+  padding-right: 40px;
+  flex-wrap: nowrap;
+  padding: 12px 16px 0;
+  margin-bottom: 8px;
+  align-items: center;
+  display: flex;
+  a {
+    margin-right: 12px;
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+    text-decoration: none;
+    img {
+      width: 48px;
+      height: 48px;
+    }
+    & > div {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-basis: 0;
+      margin-left: 8px;
+      overflow: hidden;
+      span {
+        text-align: left;
+        &:first-child {
+          font-size: 14px;
+          font-weight: 700;
+          color: rgba(0, 0, 0, 1);
+        }
+        &:nth-child(n + 1) {
+          font-size: 12px;
+          color: rgba(0, 0, 0, 0.6);
+        }
+      }
+    }
+  }
+  button {
+    position: absolute;
+    right: 12px;
+    top: 0;
+    background: transparent;
+    border: none;
+  }
+`;
+const Description=styled.div`
+padding: 0 16px;
+overflow: hidden;
+color: rgba(0,0,0,0.9);
+font-size: 14px;
+text-align:left;
+
+
+`
+const SharedImg=styled.div`
+width: 100%;
+margin-top: 8px;
+position: relative;
+background-color: #f9fafb;
+img{
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+
+}
+
+
+`
+const SocialCounts=styled.div``

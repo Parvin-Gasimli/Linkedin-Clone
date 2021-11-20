@@ -25,7 +25,7 @@ const LeftSide = (props) => {
           </a>
         </Widget>
         <Item>
-          <span style={{padding:'12px'}} >
+          <span style={{ padding: "12px" }}>
             <img src="/images/item-icon.svg" />
             My items
           </span>
@@ -33,14 +33,12 @@ const LeftSide = (props) => {
       </ArtCart>
       <CommunityCart>
         <a>
-          <span>
-            Group
-          </span>
+          <span>Group</span>
         </a>
         <a>
           <span>
             Events
-            <img src="/images/plus-icon.svg"/>
+            <img src="/images/plus-icon.svg" />
           </span>
         </a>
         <a>
@@ -126,19 +124,19 @@ const Widget = styled.div`
       display: flex;
       flex-direction: column;
       text-align: left;
-      span {  
-        padding:  5px 9px;
-        
+      span {
+        padding: 5px 9px;
+
         font-size: 12px;
         line-height: 1.333;
         & :first-child {
-          padding:  2px 9px;
+          padding: 2px 9px;
           color: rgba(0, 0, 0, 0.6);
         }
         &:nth-child(2) {
           padding: 10px 0;
-          padding:  0 9px;
-       
+          padding: 0 9px;
+
           color: rgba(0, 0, 0, 0.9);
           font-weight: bold;
         }
@@ -148,54 +146,46 @@ const Widget = styled.div`
 `;
 
 const Item = styled.a`
-border-color: rgba(0,0,0,0.9);
-text-align: left;
-font-size: 14px;
-font-weight: bold;
-display: block;
-span{
-  display: flex;
-  align-items: center;
-  color: rgba(0,0,0,0.6);
-}
-&:hover{
-  background-color: rgba(0,0,0,0.08);
-
-}
-
-
-
-
-`;
-const CommunityCart=styled(ArtCart)`
-padding: 8px 0 0;
-text-align: left;
-display: flex;
-flex-direction: column;
-a{
-  color: black;
-  padding: 4px 12px 4px 12px;
-  font-size: 12px;
-  &:hover{
-    color: #0a66c2;
-  }
-  span{
+  border-color: rgba(0, 0, 0, 0.9);
+  text-align: left;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  span {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-
+    color: rgba(0, 0, 0, 0.6);
   }
-  &:last-child{
-    color: rgba(0,0,0,0.6);
-    text-decoration: none;
-    border-top: 1px solid #d6cec2;
-    padding: 12px;
-    &:hover{
-      background-color: rgba(0,0,0,0.08);
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.08);
+  }
+`;
+const CommunityCart = styled(ArtCart)`
+  padding: 8px 0 0;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  a {
+    color: black;
+    padding: 4px 12px 4px 12px;
+    font-size: 12px;
+    &:hover {
+      color: #0a66c2;
+    }
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px;
+    }
+    &:last-child {
+      color: rgba(0, 0, 0, 0.6);
+      text-decoration: none;
+      border-top: 1px solid #d6cec2;
+      padding: 12px;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.08);
+      }
     }
   }
-}
-
-
-`
+`;
