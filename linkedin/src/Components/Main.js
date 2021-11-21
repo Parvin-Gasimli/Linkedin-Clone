@@ -43,25 +43,37 @@ const Main = () => {
               <img style={{ width: "30px " }} src="/images/ellipsis.svg.png" />
             </button>
           </SharedActor>
-          <Description>
-              Descriptions
-
-
-          </Description>
+          <Description>Descriptions</Description>
           <SharedImg>
-              <a>
-                  <img src="/images/mount.jfif"/>
-              </a>
+            <a>
+              <img src="/images/mount.jfif" />
+            </a>
           </SharedImg>
           <SocialCounts>
-              <li>
-                  <button>
-                      <img src="https://static-exp1.licdn.com/sc/h/5zhd32fqi5pxwzsz78iui643e"/>
-                  </button>
-
-              </li>
+            <li>
+              <button>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-679OQHapSpb9f5SwHarIQLTy5N9AQv4hzXXUKl1yOvJ7cblbFIzZsBm7E6lD8KzzgI&usqp=CAU" />
+                <img src="https://icons-for-free.com/iconfiles/png/512/post+share+update+icon-1320184664023422580.png" />
+                <span>Comments 85</span>
+              </button>
+            </li>
           </SocialCounts>
-
+          <button>
+            <img src="/images/like.png" />
+            <span>Like</span>
+          </button>
+          <button>
+            <img src="/images/comment.png" />
+            <span>Comments</span>
+          </button>
+          <button>
+            <img src="/images/share.png" />
+            <span>Shared</span>
+          </button>
+          <button>
+            <img src="/images/compass.png" />
+            <span>Send</span>
+          </button>
         </Article>
       </div>
     </Container>
@@ -193,27 +205,43 @@ const SharedActor = styled.div`
     border: none;
   }
 `;
-const Description=styled.div`
-padding: 0 16px;
-overflow: hidden;
-color: rgba(0,0,0,0.9);
-font-size: 14px;
-text-align:left;
-
-
-`
-const SharedImg=styled.div`
-width: 100%;
-margin-top: 8px;
-position: relative;
-background-color: #f9fafb;
-img{
+const Description = styled.div`
+  padding: 0 16px;
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 14px;
+  text-align: left;
+`;
+const SharedImg = styled.div`
+  width: 100%;
+  margin-top: 8px;
+  position: relative;
+  background-color: #f9fafb;
+  img {
     object-fit: contain;
     width: 100%;
     height: 100%;
-
-}
-
-
-`
-const SocialCounts=styled.div``
+  }
+`;
+const SocialCounts = styled.ul`
+  line-height: 1.3;
+  display: flex;
+  align-items: flex-start;
+  overflow: auto;
+  margin: 0 16px;
+  padding: 8px 0;
+  border-bottom: 1px solid #e9e5df;
+  list-style: none;
+  li {
+    margin-right: 5px;
+    font-size: 12px;
+    button {
+      display: flex;
+      align-items: center;
+      border: none;
+      img {
+        width: 30px;
+      }
+    }
+  }
+`;
