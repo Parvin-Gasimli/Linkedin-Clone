@@ -58,22 +58,24 @@ const Main = () => {
               </button>
             </li>
           </SocialCounts>
-          <button>
-            <img src="/images/like.png" />
-            <span>Like</span>
-          </button>
-          <button>
-            <img src="/images/comment.png" />
-            <span>Comments</span>
-          </button>
-          <button>
-            <img src="/images/share.png" />
-            <span>Shared</span>
-          </button>
-          <button>
-            <img src="/images/compass.png" />
-            <span>Send</span>
-          </button>
+          <SocialIcons>
+            <button>
+              <img src="/images/like.png" />
+              <span>Like</span>
+            </button>
+            <button>
+              <img src="/images/comment.png" />
+              <span>Comments</span>
+            </button>
+            <button>
+              <img src="/images/share.png" />
+              <span>Shared</span>
+            </button>
+            <button>
+              <img src="/images/compass.png" />
+              <span>Send</span>
+            </button>
+          </SocialIcons>
         </Article>
       </div>
     </Container>
@@ -242,6 +244,36 @@ const SocialCounts = styled.ul`
       img {
         width: 30px;
       }
+    }
+  }
+`;
+const SocialIcons = styled.div`
+  align-items: center;
+  display: flex;
+  justify-content: flex-start;
+  margin: 0;
+  min-height: 40px;
+  padding: 4px 8px;
+  button{
+    display: inline-flex;
+    align-items: center;
+    border: none;
+    padding: 8px;
+    color: #0a66c2;
+    margin-right: 12px;
+    background-color: transparent;
+    img{
+      width: 25px;
+      margin-right: 7px;
+    }
+
+    @media(min-width:768px){
+   span{
+    margin-left: 8px;
+    
+   }
+
+
     }
   }
 `;
